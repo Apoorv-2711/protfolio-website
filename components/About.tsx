@@ -42,15 +42,15 @@ export default function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          Greetings, Earthlings! 👽 I'm Apoorv Jain, your friendly neighborhood
+          Greetings, Earthlings! 👽 I&apos;m Apoorv Jain, your friendly neighborhood
           Frontend Developer and Data Scientist, on a mission to conquer the
           digital universe! Armed with the power of React.js and Python, I
           boldly craft visually stunning web apps and decode the secrets hidden
-          in complex datasets. Whether I'm creating a galactic chat application
+          in complex datasets. Whether I&apos;m creating a galactic chat application
           or revamping Spotify with interstellar designs, my cosmic creativity
           knows no bounds. So, buckle up for an out-of-this-world journey as we
           explore the wonders of tech and embark on adventures in data space!
-          Let's connect and warp into a future of laughter and innovation!
+          Let&apos;s connect and warp into a future of laughter and innovation!
         </p>
       </div>
     </motion.div>
