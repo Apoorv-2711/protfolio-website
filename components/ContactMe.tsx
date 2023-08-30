@@ -8,15 +8,9 @@ type Props = {};
 export default function ContactMe({}: Props) {
   const [submited, setSubmited] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // https://docs.google.com/forms/d/e/1FAIpQLSdgmTFHHgjMVlWgggMAVFQh-FacHUVil-Uj21M5NDdYECqXKg/formResponse
-  // https://docs.google.com/forms/d/e/1FAIpQLSdgmTFHHgjMVlWgggMAVFQh-FacHUVil-Uj21M5NDdYECqXKg/viewform?usp=pp_url&entry.1578957835=This+is+name&entry.2085755619=This+is+email&entry.1383274427=This+is+subject&entry.1442883947=this+is+message
-  // entry.1578957835=This+is+name
-  // entry.2085755619=This+is+email
-  // entry.1383274427=This+is+subject
-  // entry.1442883947=this+is+message
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly max-auto items-center">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-full px-10 justify-evenly max-auto items-center">
       <h3 className=" absolute top-24 uppercase tracking-[24px] text-gray-500 text-2xl">
         Contact
       </h3>
@@ -92,7 +86,7 @@ export default function ContactMe({}: Props) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#F7AB0A] py-3 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#F7AB0A] py-3 px-10 rounded-md text-black font-bold text-lg disabled:bg-neutral-300 disabled:text-gray-800"
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
@@ -108,3 +102,11 @@ export default function ContactMe({}: Props) {
     </div>
   );
 }
+
+
+  // https://docs.google.com/forms/d/e/1FAIpQLSdgmTFHHgjMVlWgggMAVFQh-FacHUVil-Uj21M5NDdYECqXKg/formResponse
+  // https://docs.google.com/forms/d/e/1FAIpQLSdgmTFHHgjMVlWgggMAVFQh-FacHUVil-Uj21M5NDdYECqXKg/viewform?usp=pp_url&entry.1578957835=This+is+name&entry.2085755619=This+is+email&entry.1383274427=This+is+subject&entry.1442883947=this+is+message
+  // entry.1578957835=This+is+name
+  // entry.2085755619=This+is+email
+  // entry.1383274427=This+is+subject
+  // entry.1442883947=this+is+message

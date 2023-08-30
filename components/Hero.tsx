@@ -3,10 +3,12 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
 export default function Hero({}: Props) {
+
   const [text, count] = useTypewriter({
     words: [
       "Hello World!",
@@ -18,6 +20,7 @@ export default function Hero({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+  
   return (
     <div className=" h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
