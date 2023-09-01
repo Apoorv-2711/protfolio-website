@@ -1,11 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Skill } from "@/typings";
 
 type Props = {
   directionLeft?: boolean;
+  data: Skill[];
 };
 
-export default function Skill({ directionLeft }: Props) {
+export default function Skill({ directionLeft, data }: Props) {
   return (
     <motion.div
       initial={{

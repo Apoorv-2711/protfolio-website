@@ -1,10 +1,14 @@
 "use client";
+import { urlFor } from "@/sanity";
+import { PageInfo } from "@/typings";
 import { motion } from "framer-motion";
 import React from "react";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({pageInfo}: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,26 +35,19 @@ export default function About({}: Props) {
         transition={{
           duration: 1.2,
         }}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
-        src="/apoorv.jpg"
+        className="-mb-36 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-xl md:w-64 md:h-[350px] xl:w-[450px] xl:h-[550px]"
+        src={urlFor(pageInfo?.profilePic).url()}
+        alt="Author image"
       />
 
-      <div className="space-y-5 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className="space-y-5 px-0 md:px-10 ">
+        <h4 className="text-3xl font-semibold mt-5 sm:mt-0">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50 ">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          Greetings, Earthlings! 👽 I&apos;m Apoorv Jain, your friendly neighborhood
-          Frontend Developer and Data Scientist, on a mission to conquer the
-          digital universe! Armed with the power of React.js and Python, I
-          boldly craft visually stunning web apps and decode the secrets hidden
-          in complex datasets. Whether I&apos;m creating a galactic chat application
-          or revamping Spotify with interstellar designs, my cosmic creativity
-          knows no bounds. So, buckle up for an out-of-this-world journey as we
-          explore the wonders of tech and embark on adventures in data space!
-          Let&apos;s connect and warp into a future of laughter and innovation!
+        <p className="text-base overflow-y-scroll sm:overflow-hidden h-[250px] sm:h-auto scrollbar-thin">
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
