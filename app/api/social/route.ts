@@ -15,7 +15,7 @@ export async function GET(request: Request, res: NextResponse<Data>) {
     {},
     {
       // cache: 'no-store',
-      next: { revalidate: 10 },
+      next: { revalidate: 3600 },
     }
   );
 

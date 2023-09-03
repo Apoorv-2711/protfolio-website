@@ -4,7 +4,7 @@ export async function fetchExperiences(): Promise<Experience[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/experience`,
     {
-      next: {revalidate: 1}
+      next: { revalidate: 3600 },
     }
   );
   const data = await res.json();
