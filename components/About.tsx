@@ -8,7 +8,7 @@ type Props = {
   pageInfo: PageInfo;
 };
 
-export default function About({pageInfo}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ export default function About({pageInfo}: Props) {
           <span className="underline decoration-[#F7AB0A]/50 ">little</span>{" "}
           background
         </h4>
-        <p className="text-base overflow-y-auto sm:overflow-hidden h-[250px] sm:h-auto scrollbar-thin">
+        <p className="text-base overflow-y-auto sm:overflow-hidden h-[250px] sm:h-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
           {pageInfo?.backgroundInformation}
         </p>
       </div>

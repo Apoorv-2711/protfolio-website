@@ -5,10 +5,10 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
-import { PageInfo, Skill, Social } from "@/typings";
-// import { fetchExperiences } from "@/utils/fetchExperiences";
+import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
+import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
-// import { fetchProjects } from "@/utils/fetchProjects";
+import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchSocial } from "@/utils/fetchSocials";
 import Image from "next/image";
@@ -17,9 +17,9 @@ import Link from "next/link";
 export default async function Home() {
   const socials: Social[] = await fetchSocial();
   const pageInfo: PageInfo = await fetchPageInfo();
-  // const experiences: Experience[] = await fetchExperiences();
+  const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
-  // const projects: Project[] = await fetchProjects();
+  const projects: Project[] = await fetchProjects();
 
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
@@ -34,7 +34,7 @@ export default async function Home() {
       </section>
 
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
 
       <section id="skills" className="snap-start">
