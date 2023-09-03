@@ -1,6 +1,6 @@
 import { Social } from "@/typings";
 
-export async function fetchSocials(): Promise<Social[]> {
+export async function fetchSocial(): Promise<Social[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/social`, {
     cache: "no-store",
   });
