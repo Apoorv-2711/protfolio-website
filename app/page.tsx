@@ -15,7 +15,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
-
   const socials: Social[] = await fetchSocial();
   const pageInfo: PageInfo = await fetchPageInfo();
   // const experiences: Experience[] = await fetchExperiences();

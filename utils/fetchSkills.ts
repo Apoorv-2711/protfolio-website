@@ -1,6 +1,6 @@
 import { Skill } from "@/typings";
 
-export const fetchSkills = async () => {
+export async function fetchSkills(): Promise<Skill[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/skill`, {
     cache: "no-store",
   });
@@ -8,4 +8,4 @@ export const fetchSkills = async () => {
   const skills: Skill[] = data.skills;
 
   return skills;
-};
+}
