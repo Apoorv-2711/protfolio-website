@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
-import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
+import { PageInfo, Skill, Social } from "@/typings";
 // import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
 // import { fetchProjects } from "@/utils/fetchProjects";
@@ -13,14 +13,6 @@ import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchSocial } from "@/utils/fetchSocials";
 import Image from "next/image";
 import Link from "next/link";
-
-type Props = {
-  pageInfo: PageInfo;
-  experiences: Experience[];
-  skills: Skill[];
-  projects: Project[];
-  socials: Social[];
-};
 
 export default async function Home() {
 
